@@ -1,7 +1,10 @@
 //PascalCase
 
-import "./styles/global.css";
-import "./styles/theme.css";
+import { Container } from "./components/Container";
+import { CountDown } from "./components/CountDown";
+import { Heading } from "./components/Heading";
+import { Logo } from "./components/Logo";
+import { Menu } from "./components/Menu";
 
 import "./styles/global.css";
 import "./styles/theme.css";
@@ -9,31 +12,21 @@ import "./styles/theme.css";
 export function App() {
   return (
     <>
-      <div className="container-fluid">
-        <div className="container">
-          <div className="content">
-            <section>Logo</section>
-          </div>
-        </div>
+      <Container>
+        <Logo />
+      </Container>
 
-        <div className="container">
-          <div className="content">
-            <section>Menu</section>
-          </div>
-        </div>
+      <Container>
+        <Menu />
+      </Container>
 
-        <div className="container">
-          <div className="content">
-            <section>Form</section>
-          </div>
-        </div>
+      <Container>
+        <CountDown />
+      </Container>
 
-        <div className="container">
-          <div className="content">
-            <section>Footer</section>
-          </div>
-        </div>
-      </div>
+      <Container>
+        <Heading>Footer</Heading>
+      </Container>
     </>
   );
 }
