@@ -42,7 +42,7 @@ export function App() {
 
           <div className="formRow">
             <p>Ciclos</p>
-            <p>0 0 0 0 0 0 0</p>
+            <p>0 0 0 0 0 0 0 0</p>
           </div>
           <div className="formRow">
             <button>Enviar</button>
