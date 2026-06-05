@@ -11,10 +11,22 @@ import { Menu } from "./components/Menu";
 
 import "./styles/global.css";
 import "./styles/theme.css";
+import { Heading } from "./components/Heading";
+import { useState } from "react";
 
 export function App() {
+  const [numero, setNumero] = useState(0);
+
+  function handleClick() {
+    setNumero((prevState) => prevState + 1);
+  }
+
   return (
     <>
+      <Heading>
+        Número: <span id="numero">{numero}</span>
+      </Heading>
+      <button onClick={handleClick}>Aumenta</button>
       <Container>
         <Logo />
       </Container>
@@ -31,7 +43,7 @@ export function App() {
         <form className="form" action="">
           <div className="formRow">
             <DefaultInput
-              labelText="task"
+              labelText="Task"
               id="meuInput"
               type="text"
               placeholder="Digite algo"
